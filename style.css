@@ -1,13 +1,22 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-h1, h2, h3, h4, p, li{
+h1,
+h2,
+h3,
+h4,
+p,
+li {
   font-family: sans-serif;
   color: #444;
 }
-h1, h2, h3, h4{
+h1,
+h2,
+h3,
+h4 {
   color: #f1c40f;
 }
 nav a:link {
@@ -21,7 +30,7 @@ nav a:link:last-child {
 }
 
 .container {
-  width: 800px;
+  width: 1200px;
   margin: 0 auto;
   position: relative;
 }
@@ -38,35 +47,35 @@ nav a:link:last-child {
   margin-bottom: 50px;
   position: relative;
 }
-h1{
+h1 {
   font-size: 30px;
   text-transform: uppercase;
   font-style: italic;
- 
 }
-h2{
+h2 {
   font-size: 40px;
   margin-bottom: 20px;
   /* background-color: yellow; */
   position: relative;
 }
-h3{
+h3 {
   font-size: 26px;
   margin-top: 30px;
   margin-bottom: 15px;
 }
-h4{
+h4 {
   text-transform: uppercase;
   font-size: 18px;
   text-align: center;
+  margin-bottom: 30px;
 }
-p{
+p {
   font-family: sans-serif;
   font-size: 22px;
   line-height: 1.5;
   margin-bottom: 20px;
 }
-li{
+li {
   font-size: 20px;
   margin-bottom: 8px;
 }
@@ -114,9 +123,8 @@ a:link {
   color: #f1c40f;
   text-decoration: none;
 }
-a:visited{
+a:visited {
   color: #f1c40f;
-
 }
 a:hover {
   color: #444;
@@ -136,7 +144,7 @@ a:active {
 }
 
 .text {
-  color:#f7f7f7
+  color: #f7f7f7;
 }
 
 footer p {
@@ -145,18 +153,19 @@ footer p {
 article {
   margin-bottom: 60px;
 }
-ul, ol {
+ul,
+ol {
   margin-left: 50px;
   margin-bottom: 15px;
 }
 
 /*like button on image*/
 
-.like {   
+.like {
   font-size: 22px;
   background-color: white;
   padding: 5px;
-  border-width:0;
+  border-width: 0;
   border-radius: 50%;
 
   position: absolute;
@@ -171,7 +180,7 @@ ul, ol {
   background-color: #444;
 }
 
-.arrow {
+/* .arrow {
   font-size: 18px;
   color: #444;
   background-color: #f1c40f;
@@ -188,8 +197,8 @@ ul, ol {
 .arrow:active {
   background-color: #f7f7f7;
   color: #f1c40f;
-  /* cursor: pointer; */
-}
+  /* cursor: pointer; 
+}*/
 
 h1::first-letter {
   font-style: normal;
@@ -205,7 +214,52 @@ h2::after {
   color: black;
   padding: 5px 10px;
   position: absolute;
-  top: -12PX;
-  right: -25PX;
+  top: -12px;
+  right: -25px;
   border-radius: 20px;
+}
+
+/*floats*/
+
+h1 {
+  float: left;
+}
+
+.nav-bar {
+  display: inline;
+  float: right;
+  /* margin-left: 20px; */
+}
+
+.main-header::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.my-image {
+  float: left;
+}
+.me {
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+article {
+  float: left;
+  width: 825px;
+}
+aside {
+  float: right;
+  width: 300px;
+  /* height: 300px; */
+  /* height: 500px;
+  padding: 50px 0 70px 0; */
+}
+
+/* ul li a {
+  display: block;
+} */
+footer {
+  clear: both;
 }

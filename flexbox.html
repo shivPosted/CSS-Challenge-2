@@ -14,7 +14,7 @@
       }
       .el--3 {
         background-color: green;
-        height: 500px;
+        height: 200px;
         /* font-size: 20px; */
       }
       .el--4 {
@@ -38,14 +38,33 @@
         font-family: sans-serif;
         background-color: #ddd;
         font-size: 40px;
+        width: 900px;
         margin: 40px;
 
         /* FLEXBOX */
         font-size: 30px;
         display: flex;
-        align-items: center;
-        justify-content: space-around;
+        align-items: center; /*cross axis*/
+        justify-content: flex-start; /*main axis*/
+        gap: 30px;
       }
+
+      .el--1 {
+        align-self: flex-end;
+      }
+
+      .el--5 {
+        align-self: flex-start;
+        /* order: -2; */
+      }
+
+      .el--8 {
+        order: -1;
+      }
+
+      /* .el {
+        margin-right: 20px;
+      } */
     </style>
   </head>
   <body>

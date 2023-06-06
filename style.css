@@ -92,10 +92,13 @@ li:last-child {
   font-family: sans-serif;
   font-size: 18px;
   font-style: italic;
+  margin-left: 15px;
+  margin-bottom: 0;
 }
 
 #copyright {
   font-size: 16px;
+  /* margin-bottom: 0; */
 }
 
 .related-author {
@@ -224,14 +227,14 @@ h2::after {
 
 /*floats*/
 
-h1 {
+/* h1 {
   float: left;
 }
 
 .nav-bar {
   display: inline;
   float: right;
-  /* margin-left: 20px; */
+                          
 }
 
 .main-header::after {
@@ -255,14 +258,45 @@ article {
 aside {
   float: right;
   width: 300px;
-  /* height: 300px; */
-  /* height: 500px;
-  padding: 50px 0 70px 0; */
 }
 
-/* ul li a {
-  display: block;
-} */
+                                           
 footer {
   clear: both;
+} */
+
+/*Using flex-box*/
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+.author-section {
+  /* background-color: red; */
+  margin-bottom: 15px;
+  /* width: 500px; */
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.noBulletPost {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* width: 380px;
+  justify-content: space-between; */
+}
+.by {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+/* .noBulletPost div {
+  margin-left: 20px;
+} */

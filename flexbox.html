@@ -38,7 +38,7 @@
         font-family: sans-serif;
         background-color: #ddd;
         font-size: 40px;
-        width: 900px;
+        width: 1000px;
         margin: 40px;
 
         /* FLEXBOX */
@@ -46,11 +46,12 @@
         display: flex;
         align-items: center; /*cross axis*/
         justify-content: flex-start; /*main axis*/
-        gap: 30px;
+        /* gap: 30px; */
       }
 
       .el--1 {
         align-self: flex-end;
+        /* flex-grow: 1; */
       }
 
       .el--5 {
@@ -62,9 +63,31 @@
         order: -1;
       }
 
-      /* .el {
-        margin-right: 20px;
+      /* .el--6 {
+        
       } */
+
+      .el--7 {
+        align-self: flex-end;
+        /* flex-grow: 2; */
+      }
+
+      .el {
+        /*
+      Default Values
+      flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: auto;  determine initial size of flex items
+      */
+
+        /* flex-basis: 50px; */
+        /* flex-grow: 1; */
+        /* flex-basis: 500px;
+        flex-shrink: 0; */
+        /* flex-grow: 1; */
+        flex: 0 0 400px;
+        /* flex: 1; */
+      }
     </style>
   </head>
   <body>
@@ -75,8 +98,8 @@
       <div class="el el--4">are</div>
       <div class="el el--5">amazing</div>
       <div class="el el--6">languages</div>
-      <div class="el el--7">to</div>
-      <div class="el el--8">learn</div>
+      <!-- <div class="el el--7">to</div>
+      <div class="el el--8">learn</div> -->
     </div>
   </body>
 </html>

@@ -14,7 +14,7 @@
       }
       .el--3 {
         background-color: green;
-        /* height: 200px;                /*this will define the tallest height of the entire row it is placed in*/
+        height: 200px; /*this will define the tallest height of the entire row it is placed in*/
       }
       .el--4 {
         background-color: goldenrod;
@@ -24,11 +24,12 @@
       }
       .el--6 {
         background-color: steelblue;
+        grid-column: -4 / -1;
       }
       .el--7 {
         background-color: yellow;
-        height: 200px;
-        align-self: flex-end; /*this flex property is also working on grid*/
+        /* height: 200px; */
+        /*align-self: flex-end; this flex property is also working on grid*/
       }
       .el--8 {
         background-color: crimson;
@@ -53,11 +54,44 @@
           1fr
         ); /*repeat function will set the fr of four columns to 1fr*/
         /*  grid-template-rows: 300px 300px; /*defines how many and of what height rows you want in your grid*/
-        grid-template-rows: 3fr 1fr;
-        height: 500px; /*will set the height of the grid container*/
+        grid-template-rows: 1fr 1fr 1fr;
+        /*height: 500px; will set the height of the grid container*/
         /* gap: 20px; */
         row-gap: 50px; /*tells how much gap you want between rows*/
         column-gap: 10px; /*tells how much gap you want between columns*/
+      }
+
+      .el--8 {
+        grid-column: 2 / 3; /*2 and 3 defines grid line of the column start / end*/
+        grid-row: 1 / 2; /*same as grid-column*/
+      }
+
+      .el--2 {
+        /* grid-column: 1 / 2; */
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+      }
+
+      /*styling for container two*/
+
+      .ell--1 {
+        background-color: blueviolet;
+      }
+      .ell--3 {
+        background-color: orangered;
+        height: 150px;
+      }
+      .ell--4 {
+        background-color: lime;
+      }
+      .ell--5 {
+        background-color: goldenrod;
+      }
+      .ell--6 {
+        background-color: pink;
+      }
+      .ell--7 {
+        background-color: skyblue;
       }
 
       .container--2 {
@@ -67,10 +101,32 @@
         font-size: 40px;
         margin: 100px;
 
-        width: 1000px;
+        width: 700px;
         height: 600px;
 
         /* CSS GRID */
+
+        display: grid;
+        grid-template-columns: 125px 200px 125px;
+        grid-template-rows: 250px 100px;
+
+        /*aligning tracks inside container: distribute empty space*/
+        justify-content: center; /*align horizontally the tracks all other properties related to justify-content can be used*/
+        align-content: center; /* align vertically the tracks and instead of flex-end and flex-start use start and end*/
+        gap: 30px;
+
+        /*aligning items inside cells*/
+        align-items: center;
+        justify-items: center; /*using items instead of content because it is based on individual items inside the cells*/
+
+        /* align-items: end;
+        justify-items: end; */
+      }
+
+      /* we can align individual items by selecting them*/
+      .ell--3 {
+        justify-self: end;
+        align-self: end;
       }
     </style>
   </head>
@@ -82,17 +138,17 @@
       <div class="el el--4">(4) are</div>
       <div class="el el--5">(5) amazing</div>
       <div class="el el--6">(6) languages</div>
-      <div class="el el--7">(7) to</div>
+      <!-- <div class="el el--7">(7) to</div> -->
       <div class="el el--8">(8) learn</div>
     </div>
 
     <div class="container--2">
-      <div class="el el--1">(1)</div>
-      <div class="el el--3">(3)</div>
-      <div class="el el--4">(4)</div>
-      <div class="el el--5">(5)</div>
-      <div class="el el--6">(6)</div>
-      <div class="el el--7">(7)</div>
+      <div class="el ell--1">(1)</div>
+      <div class="el ell--3">(3)</div>
+      <div class="el ell--4">(4)</div>
+      <div class="el ell--5">(5)</div>
+      <div class="el ell--6">(6)</div>
+      <div class="el ell--7">(7)</div>
     </div>
   </body>
 </html>

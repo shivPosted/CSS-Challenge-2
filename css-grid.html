@@ -14,7 +14,7 @@
       }
       .el--3 {
         background-color: green;
-        height: 200px;
+        /* height: 200px;                /*this will define the tallest height of the entire row it is placed in*/
       }
       .el--4 {
         background-color: goldenrod;
@@ -43,11 +43,21 @@
 
         /* CSS GRID */
         display: grid;
-        grid-template-columns: 200px 200px 400px 500px; /*defines how many and of what width columns you want in your grid*/
-        grid-template-rows: 300px 300px; /*defines how many and of what height rows you want in your grid*/
+        /* grid-template-columns: 200px 200px 400px 500px;                 defines how many and of what width columns you want in your grid*/
+        /*grid-template-columns: 1fr 1fr 1fr 1fr; /*defines how many and of what width columns you want in your grid , fr is unit used for variable width    bigger fr means larger result in*/
+        /*grid-template-columns: 3fr 1fr 1fr 1fr; /*gives three parts of containter to first column and remaining of 1 parts each to other three columns*/
+        /* grid-template-columns: 3fr 1fr 1fr auto; /*auto will make the last column the required space for its content*/
+
+        grid-template-columns: repeat(
+          4,
+          1fr
+        ); /*repeat function will set the fr of four columns to 1fr*/
+        /*  grid-template-rows: 300px 300px; /*defines how many and of what height rows you want in your grid*/
+        grid-template-rows: 3fr 1fr;
+        height: 500px; /*will set the height of the grid container*/
         /* gap: 20px; */
         row-gap: 50px; /*tells how much gap you want between rows*/
-        column-gap: 20px; /*tells how much gap you want between columns*/
+        column-gap: 10px; /*tells how much gap you want between columns*/
       }
 
       .container--2 {
